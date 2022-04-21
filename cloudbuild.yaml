@@ -1,10 +1,13 @@
 steps:
-- name: node:12.18.1
+- name: node:12
   entrypoint: npm
   args: ['install', '--save-dev']
-- name: node:12.18.1
+- name: node:12
   entrypoint: npm
   args: ['audit', 'fix']
-- name: node:12.18.1
+- name: node:12
+  entrypoint: npx
+  args: ['truffle', 'complie', '-y']
+- name: node:12
   entrypoint: npm
   args: ['test']
