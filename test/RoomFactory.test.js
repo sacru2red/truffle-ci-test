@@ -102,7 +102,7 @@ describe('RoomFactory', function () {
             const roomBalance = await web3.eth.getBalance(event.args._room)
 
             factoryBalance.should.be.bignumber.equal('0')
-            roomBalance.should.be.bignumber.equal('1')
+            roomBalance.should.be.bignumber.equal('0')
         })
 
         it('can pause createRoom', async function () {
